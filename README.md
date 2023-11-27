@@ -2,9 +2,9 @@
 
 ## Requirements
 
-NodeJS (>=16.20.1)
+- NodeJS (>=16.20.1)
 
-### To run this project
+## To run this project
 
 - `git clone https://github.com/rahmetasevic/node-assessment.git`
 - `cd node-assessment`
