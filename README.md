@@ -1,4 +1,8 @@
-## Node.js Assessment Test
+# Node.js Assessment Test
+
+## Requirements
+
+NodeJS (>=16.20.1)
 
 ### To run this project
 
