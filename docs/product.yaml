@@ -1,0 +1,77 @@
+paths:
+  /products:
+    post:
+      summary: "Create product"
+      tags:
+        - Product
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  required: true
+                description:
+                  type: string
+                  required: true
+                price:
+                  type: number
+                  required: true
+                quantity:
+                  type: number
+                  required: true
+      responses:
+        "201":
+          description: Created
+        "403":
+          description: Forbidden
+        "500":
+          description: Server Error
+
+    get:
+      summary: Get all available products
+      tags:
+        - Product
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not found
+  /products/{id}:
+    get:
+      summary: Get product by id
+      tags:
+        - Product
+      parameters:
+        - name: id
+          description: Product id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not found
+  /product/{id}:
+    delete:
+      summary: Delete product by id
+      tags:
+        - Product
+      parameters:
+        - name: id
+          description: Product id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          description: Created
+        "403":
+          description: Forbidden
+        "500":
+          description: Server Error

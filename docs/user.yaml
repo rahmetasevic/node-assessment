@@ -1,0 +1,53 @@
+paths:
+  /user/register:
+    post:
+      summary: Create User
+      tags:
+        - User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  required: true
+                password:
+                  type: string
+                  required: true
+                firstName:
+                  type: string
+                  required: true
+                lastName:
+                  type: string
+                  required: true
+                phone:
+                  type: string
+                  required: true
+  /user/login:
+    post:
+      summary: Login
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: OK
+        "401":
+          description: Invalid
+        "500":
+          description: Server Error
